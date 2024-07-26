@@ -1,0 +1,106 @@
+---
+title: "Test MAW Barycenter"
+author: "Jay Zhang"
+date: "2023-08-05"
+output: html_document
+---
+
+### Import Functions
+
+```{r}
+source("./barycenter.R")
+```
+
+### COVID Data for testing
+
+```{r}
+# Import Data from mat file
+test_data <- R.matlab::readMat("~/Desktop/COVID Data Review/BIH-CoV-01_test.mat")
+```
+
+
+```{r}
+m <- 5 # user should specify the number of components for MAW barycenter
+stride <- t(test_data$stride)
+test_data$ww <- t(test_data$ww)
+N <- length(stride)
+instanceW <- matrix(1, nrow = 1, ncol = N)
+c0 <- list()
+c0$supp <- test_data$supp[, 1:m]
+c0$w <- test_data$ww[1:m] / sum(test_data$ww[1:m])
+# set the number of iterations and badmm_rho (no need to change)
+options <- list()
+options$badmm_max_iters <- 1000
+options$badmm_rho <- 10
+
+result <- centroid_sphBregman_GMM(stride, instanceW, test_data$supp, test_data$ww, c0, options)
+```
+
+```{r}
+matlab_result <- R.matlab::readMat("~/Desktop/COVID Data Review/BIH-CoV-01_test_OT.mat")
+```
+
+#### Compare difference
+
+```{r}
+# supp
+max(abs(matlab_result$c[,,1]$supp - result$c$supp))
+```
+
+```{r}
+# w
+max(abs(matlab_result$c[,,1]$w - result$c$w))
+```
+
+```{r}
+# X
+max(abs(matlab_result$X - result$X))
+```
+
+
+
+### Mouse Data for testing
+
+```{r}
+# Import Data from mat file
+test_data <- R.matlab::readMat("~/Downloads/code/gmm-barycenter/src/mouse_2.mat")
+```
+
+```{r}
+m <- 15 # user should specify the number of components for MAW barycenter
+stride <- t(test_data$stride)
+test_data$ww <- t(test_data$ww)
+N <- length(stride)
+instanceW <- matrix(1, nrow = 1, ncol = N)
+c0 <- list()
+c0$supp <- test_data$supp[, 1:m]
+c0$w <- test_data$ww[1:m] / sum(test_data$ww[1:m])
+# set the number of iterations and badmm_rho (no need to change)
+options <- list()
+options$badmm_max_iters <- 1000
+options$badmm_rho <- 10
+
+result <- centroid_sphBregman_GMM(stride, instanceW, test_data$supp, test_data$ww, c0, options)
+```
+
+```{r}
+matlab_result <- R.matlab::readMat("~/Downloads/code/gmm-barycenter/src/mouse_2_OT.mat")
+```
+
+
+#### Compare difference
+
+```{r}
+# supp
+max(abs(matlab_result$c[,,1]$supp - result$c$supp))
+```
+
+```{r}
+# w
+max(abs(matlab_result$c[,,1]$w - result$c$w))
+```
+
+```{r}
+# X
+max(abs(matlab_result$X - result$X))
+```
