@@ -43,4 +43,7 @@ The object in the output file named "c.*" contains all the information of the co
 
 7. run runMAW.m
 
+### R code
 
+#### For computing MAW barycenter
+#### For computing MAW distance
