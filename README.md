@@ -20,7 +20,7 @@ mex -v CLIBS="$CLIBS -lstdc++ -framework Accelerate" sqrtm_batch_ud.c
 ```
 
 The above commands will compile C source files: sqrtm_batch_it.c and sqrtm_batch_ud.c. 
-#### For computing barycenter
+#### For computing MAW barycenter
 4. Run Matlab under directory (working directory): ../gmm-barycenter/src/barycenter
    
    Data files named "*.mat" are put under directory: ../gmm-barycenter/src
@@ -39,7 +39,8 @@ After running barycenter_md.m, it will output a matlab data file.
 
 The object in the output file named "c.*" contains all the information of the compuated MAW barycenter. More specifically, "c.w" contains the prior proportion for the barycenter, and "c.supp" is a matrix of size (d+d*d)x J, where J is the number of components specified for the barycenter. Similarly, each column of "c.supp" stores the mean vector and vectorized covariance for each component. 
 
+#### For computing MAW distance
 
-
+7. run runMAW.m
 
 
