@@ -45,32 +45,28 @@ The object in the output file named "c.*" contains all the information of the co
 
 ### R code
 
-#### For computing MAW barycenter
 
-1. This step also needs the installation of mosek toolbox as stated above. To install the Rmosek package you may run the install.rmosek function of the script <MSKHOME>/mosek/9.2/tools/platform/<PLATFORM>/rmosek/builder.R. This is a wrapper around the install.packages function with recommended default argument values (e.g., to a compatible MOSEK repository). As example, if called with no arguments, it will attempt an autoconfigured installation:
+1. Also needs the mosek toolbox. To install the Rmosek package you may run the install.rmosek function of the script <MSKHOME>/mosek/9.2/tools/platform/<PLATFORM>/rmosek/builder.R. This is a wrapper around the install.packages function with recommended default argument values (e.g., to a compatible MOSEK repository). As example, if called with no arguments, it will attempt an autoconfigured installation:
 ```
 source("<RMOSEKDIR>/builder.R")
 attachbuilder()
 install.rmosek()
 ```
-
+#### For computing MAW barycenter
 2. Import the code from barycenter.R
 ```
 source(barycenter.R)
 ```
 
-3. Compute the barycenter using the function below with the same argument settings as the MAtLAb code stated above.
+3. Compute the barycenter using the function below with the same argument settings as the Matlab code stated above.
 ```
 barycenter <- centroid_sphBregman_GMM((stride, instanceW, supp, w, c0, options)
 ```
 
 
-
-   
-
 #### For computing MAW distance
 
-After installation of Rmosek pacakge, the following code will help compute the MAW distance between two GMMs.
+4. The following code will help compute the MAW distance between two GMMs.
 ```
 source(MAWdist.R)
 distance <- Mawdist(d, supp1, supp2, w1, w2)
