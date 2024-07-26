@@ -72,3 +72,21 @@ source(MAWdist.R)
 distance <- Mawdist(d, supp1, supp2, w1, w2)
 ```
 
+### Python code
+
+1. Install MOSEK for Python manually from the MOSEK toolbox using pip. At least version 21.3 of pip is required, as it allows for in-tree builds. Go to the folder <MSKHOME>/mosek/9.2/tools/platform/<PLATFORM>/python/3 and run
+```
+pip install .
+```
+All standard options for pip can be applied according to the user’s needs.
+
+2. Compute the MAW barycenter and distance using the same function as R code after import the python files.
+```
+import MAWdist_torch_version.py # For computing MAW distance using torch tensor as input
+import MAWdist_numpy_version.py # For computing MAW distance using numpy array as input
+import barycenter.py # For computing MAW barycenter
+```
+
+
+
+
