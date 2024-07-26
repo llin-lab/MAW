@@ -37,7 +37,7 @@ stride: It is an integer vector of the form (J_1,...,J_N).
 
 After running barycenter_md.m, it will output a matlab data file. 
 
-The object in the output file named "c.*" contains all the information of the computed MAW barycenter. More specifically, "c.w" contains the prior proportion for the barycenter, and "c.supp" is a matrix of size (d+d*d)x J, where J is the number of components specified for the barycenter. Similarly, each column of "c.supp" stores the mean vector and vectorized covariance for each component. 
+The object in the output file named "c.\*" contains all the information of the computed MAW barycenter. More specifically, "c.w" contains the prior proportion for the barycenter, and "c.supp" is a matrix of size (d+d*d)x J, where J is the number of components specified for the barycenter. Similarly, each column of "c.supp" stores the mean vector and vectorized covariance for each component. 
 
 #### For computing MAW distance
 
