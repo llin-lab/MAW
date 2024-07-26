@@ -15,7 +15,7 @@ source("./barycenter.R")
 
 ```{r}
 # Import Data from mat file
-test_data <- R.matlab::readMat("~/Desktop/COVID Data Review/BIH-CoV-01_test.mat")
+test_data <- R.matlab::readMat("<data folder>/BIH-CoV-01_test.mat")
 ```
 
 
@@ -37,7 +37,7 @@ result <- centroid_sphBregman_GMM(stride, instanceW, test_data$supp, test_data$w
 ```
 
 ```{r}
-matlab_result <- R.matlab::readMat("~/Desktop/COVID Data Review/BIH-CoV-01_test_OT.mat")
+matlab_result <- R.matlab::readMat("<path to result>/BIH-CoV-01_test_OT.mat")
 ```
 
 #### Compare difference
@@ -63,7 +63,7 @@ max(abs(matlab_result$X - result$X))
 
 ```{r}
 # Import Data from mat file
-test_data <- R.matlab::readMat("~/Downloads/code/gmm-barycenter/src/mouse_2.mat")
+test_data <- R.matlab::readMat("<data folder>/mouse_2.mat")
 ```
 
 ```{r}
@@ -84,7 +84,7 @@ result <- centroid_sphBregman_GMM(stride, instanceW, test_data$supp, test_data$w
 ```
 
 ```{r}
-matlab_result <- R.matlab::readMat("~/Downloads/code/gmm-barycenter/src/mouse_2_OT.mat")
+matlab_result <- R.matlab::readMat("<path to result>/mouse_2_OT.mat")
 ```
 
 
