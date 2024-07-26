@@ -74,7 +74,7 @@ distance <- Mawdist(d, supp1, supp2, w1, w2)
 
 ### Python code
 
-1. Install mosek for Python manually from the MOSEK toolbox using pip. At least version 21.3 of pip is required, as it allows for in-tree builds. Go to the folder <MSKHOME>/mosek/9.2/tools/platform/<PLATFORM>/python/3 and run
+1. Install mosek for Python manually from the MOSEK toolbox using pip. At least version 21.3 of pip is required, as it allows for in-tree builds. Go to the folder <MSKHOME>/mosek/9.2/tools/platform/`<PLATFORM>`/python/3 and run
 ```
 pip install .
 ```
