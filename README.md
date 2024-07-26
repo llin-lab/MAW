@@ -31,13 +31,13 @@ DATA format assumed for the input data file `*.mat` of `barycenter_md.m`:
 The `*.mat` data file should contain three objects: ww, supp, stride
 ww: concatenates the prior proportions for all the GMMs estimated from all batches. Thus, ww is a vector of length J_1 + J_2 + ...+ J_N, where J_k is the number of mixture components for each data batch, and N is the total number of data batches.
 
-supp: stores the mean and covariance for all the GMMs. More specifically, supp is a matrix of dimension (d+d*d)x(J_1+J_2+...+J_N), where d is the dimension of the data. For each column of supp, the first d rows store the mean vector, and the last d*d rows store the vectorized covariance matrix for each component. 
+supp: stores the mean and covariance for all the GMMs. More specifically, supp is a matrix of dimension (d+d\*d)x(J_1+J_2+...+J_N), where d is the dimension of the data. For each column of supp, the first d rows store the mean vector, and the last d*d rows store the vectorized covariance matrix for each component. 
 
 stride: It is an integer vector of the form (J_1,...,J_N). 
 
 After running barycenter_md.m, it will output a matlab data file. 
 
-The object in the output file named "c.\*" contains all the information of the computed MAW barycenter. More specifically, "c.w" contains the prior proportion for the barycenter, and "c.supp" is a matrix of size (d+d*d)x J, where J is the number of components specified for the barycenter. Similarly, each column of "c.supp" stores the mean vector and vectorized covariance for each component. 
+The object in the output file named "c.\*" contains all the information of the computed MAW barycenter. More specifically, "c.w" contains the prior proportion for the barycenter, and "c.supp" is a matrix of size (d+d\*d)x J, where J is the number of components specified for the barycenter. Similarly, each column of "c.supp" stores the mean vector and vectorized covariance for each component. 
 
 #### For computing MAW distance
 
