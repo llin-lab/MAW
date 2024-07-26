@@ -46,4 +46,20 @@ The object in the output file named "c.*" contains all the information of the co
 ### R code
 
 #### For computing MAW barycenter
+1. Create a directory called "code", unpack the downloaded files and put them under the directory "code". In the discussions below, we assume "code" is the current directory. 
+
+2. Need to obtain a valid mosek installation/license. If you already have one, you can put the mosek license in the folder code/mosek. See (https://docs.mosek.com/9.2/toolbox/install-interface.html) for details.
+
+   After mosek package is downloaded and unpacked, a directory called mosek will be created usually under the home directory.
+
+3. To install the Rmosek package you may run the install.rmosek function of the script <MSKHOME>/mosek/10.2/tools/platform/<PLATFORM>/rmosek/builder.R. This is a wrapper around the install.packages function with recommended default argument values (e.g., to a compatible MOSEK repository). As example, if called with no arguments, it will attempt an autoconfigured installation:
+```
+source("<RMOSEKDIR>/builder.R")
+attachbuilder()
+install.rmosek()
+```
+
+
+   
+
 #### For computing MAW distance
