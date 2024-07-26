@@ -1,0 +1,170 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=mex 2017.5.23)  30 MAR 2021 14:27
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**sqrtm_batch_it.c
+(./sqrtm_batch_it.c
+This is MeX  Version 1.05  18 XII 1993  (B. Jackowski & M. Ry\'cko)
+! You can't use `macro parameter character #' in vertical mode.
+l.1 #
+     include "mex.h"
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.2 #
+     include "matrix.h"
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.3 #
+     include "cblas.h"
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.4 #
+     include "lapacke.h"
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.5 #
+     include <math.h>
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.8  S = sqrtm_
+               batch_it(V, w, m);
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.9 
+    
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \sum 
+l.13  S = \sum
+              _{i=1}^n w(i) * sqrtm(m * V(:,:,i) * m)
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.15 
+     
+? 
+
+Overfull \hbox (38.38379pt too wide) in paragraph at lines 22--26
+[]\tenrm dimensions = mxGet-Di-men-sions(prhs[0]); V = mxGetPr(prhs[0]); w = mx
+GetPr(prhs[1]); m = mxGetPr(prhs[2]); |
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm d
+.\tenrm i
+.\tenrm m
+.\tenrm e
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.38     lapack_
+                int lwork = 26*d, liwork=10*d, *iwork, suppz;
+? 
+! Misplaced alignment tab character &.
+l.52 ...                     0, 0, LAPACK_dlamch(&
+                                                  cS),
+? 
+! Misplaced alignment tab character &.
+l.53                                  &
+                                       M, L, Q,
+? 
+! Misplaced alignment tab character &.
+l.54                                  d, &
+                                          suppz,
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.65 
+     
+? 
+
+Overfull \hbox (38.4343pt too wide) in paragraph at lines 34--65
+\teni d; liwork \tenrm = 10 \tensy ^^C \teni d; \tensy ^^C\teni iwork; suppz\te
+nrm ; \teni intinfo\tenrm ; \teni L \tenrm = (\teni double\tensy ^^C\tenrm )\te
+ni malloc\tenrm (\teni d \tensy ^^C \tenrm 3 \tensy ^^C \teni sizeof\tenrm (\te
+ni double\tenrm )); \teni work \tenrm = (\teni double\tensy ^^C\tenrm )\teni ma
+lloc\tenrm (\teni lwork \tensy ^^C|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\teni d
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni l
+.\kern0.19678
+.etc.
+
+
+Overfull \hbox (146.59474pt too wide) in paragraph at lines 34--65
+\teni sizeof\tenrm (\teni double\tenrm )); \teni iwork \tenrm = (\teni lapack[]
+nt\tensy ^^C\tenrm )\teni malloc\tenrm (\teni liwork \tensy ^^C \teni sizeof\te
+nrm (\teni lapack[]nt\tenrm )); \teni cblas[]gemm\tenrm (\teni CblasColMajor; C
+blasNoTrans; CblasNoTrans; d; d \tensy ^^C|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\teni s
+.\teni i
+.\teni z
+.\kern0.4398
+.\teni e
+.etc.
+
+
+Overfull \hbox (2112.43875pt too wide) in paragraph at lines 34--65
+\teni n; d; \tenrm 1\teni :\tenrm 0\teni ; m; d; V; d; \tenrm 0\teni :\tenrm 0\
+teni ; Vtmp\tenrm 1\teni ; d\tenrm ); \teni mwSizei; j; k\tenrm ; \teni lapack[
+]ntM\tenrm ; \teni charcS \tenrm =[] \teni S[]\tenrm ; \teni for\tenrm (\teni i
+ \tenrm = 0; \teni i < n\tenrm ; + + \teni i\tenrm )[]$ |
+
+\hbox(7.51782+2.5)x469.75499, glue set - 1.0
+.\teni n
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni d
+.\teni ;
+.etc.
+
+)
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+! Emergency stop.
+<*> 
+    
+End of file on the terminal!
+
+No pages of output.
