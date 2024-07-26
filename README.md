@@ -11,7 +11,7 @@ To cite the reference, please use Lin L, Shi W, Ye J, Li J. (2023) Multisource s
 
    After mosek package is downloaded and unpacked, a directory called mosek will be created usually under the home directory. Move the directory to `../gmm-barycenter/src/barycenter`
 
-3. Then compile *.c source files. For Mac OS (and probably need to install Accelerate framework from Apple Store, if haven't). Open a Matlab console under the directory: code/gmm-barycenter/src/barycenter
+3. Then compile `*.c` source files. For Mac OS (and probably need to install Accelerate framework from Apple Store, if haven't). Open a Matlab console under the directory: code/gmm-barycenter/src/barycenter
    Then run the following command in the Matlab console:
    
 ```
@@ -23,12 +23,12 @@ The above commands will compile C source files: sqrtm_batch_it.c and sqrtm_batch
 #### For computing MAW barycenter
 4. Run Matlab under directory (working directory): `../gmm-barycenter/src/barycenter`
    
-   Data files named "*.mat" are put under directory: `../gmm-barycenter/src`
+   Data files named `*.mat` are put under directory: `../gmm-barycenter/src`
 
 6. In Matlab console, run barycenter_md.m located in `../gmm-barycenter/src/barycenter`. The data file has to be put in the same directory `../gmm-barycenter/src`.
 
-DATA format assumed for the input data file "*.mat" of barycenter_md.m:
-The *.mat data file should contain three objects: ww, supp, stride
+DATA format assumed for the input data file `*.mat` of `barycenter_md.m`:
+The `*.mat` data file should contain three objects: ww, supp, stride
 ww: concatenates the prior proportions for all the GMMs estimated from all batches. Thus, ww is a vector of length J_1 + J_2 + ...+ J_N, where J_k is the number of mixture components for each data batch, and N is the total number of data batches.
 
 supp: stores the mean and covariance for all the GMMs. More specifically, supp is a matrix of dimension (d+d*d)x(J_1+J_2+...+J_N), where d is the dimension of the data. For each column of supp, the first d rows store the mean vector, and the last d*d rows store the vectorized covariance matrix for each component. 
