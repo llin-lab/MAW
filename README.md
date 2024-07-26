@@ -73,6 +73,6 @@ barycenter <- centroid_sphBregman_GMM((stride, instanceW, supp, w, c0, options)
 After installation of Rmosek pacakge, the following code will help compute the MAW distance between two GMMs.
 ```
 source(MAWdist.R)
-MAWdist <- Mawdist(d, supp1, supp2, w1, w2)
+distance <- Mawdist(d, supp1, supp2, w1, w2)
 ```
 
