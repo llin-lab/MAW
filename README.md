@@ -20,11 +20,12 @@ mex -v CLIBS="$CLIBS -lstdc++ -framework Accelerate" sqrtm_batch_ud.c
 The above commands will compile C source files: sqrtm_batch_it.c and sqrtm_batch_ud.c. 
 
 4. Run Matlab under directory (working directory): ../gmm-barycenter/src/barycenter
+   
    Data files named "*.mat" are put under directory: ../gmm-barycenter/src
 
-5. In Matlab console, run barycenter_md.m located in ../gmm-barycenter/src/barycenter. The data file has to be put in the same directory ../gmm-barycenter/src.
+6. In Matlab console, run barycenter_md.m located in ../gmm-barycenter/src/barycenter. The data file has to be put in the same directory ../gmm-barycenter/src.
 
-DATA format assumed for the input data file of barycenter_md.m:
+DATA format assumed for the input data file "*.mat" of barycenter_md.m:
 The *.mat data file should contain three objects: ww, supp, stride
 ww: concatenates the prior proportions for all the GMMs estimated from all batches. Thus, ww is a vector of length J_1 + J_2 + ...+ J_N, where J_k is the number of mixture components for each data batch, and N is the total number of data batches.
 
