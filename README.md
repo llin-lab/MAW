@@ -20,7 +20,7 @@ mex -v CLIBS="$CLIBS -lstdc++ -framework Accelerate" sqrtm_batch_ud.c
 ```
 
 The above commands will compile C source files: sqrtm_batch_it.c and sqrtm_batch_ud.c. 
-
+#### For computing barycenter
 4. Run Matlab under directory (working directory): ../gmm-barycenter/src/barycenter
    
    Data files named "*.mat" are put under directory: ../gmm-barycenter/src
