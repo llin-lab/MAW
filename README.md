@@ -61,7 +61,7 @@ source(barycenter.R)
 
 3. Compute the barycenter using the function below with the same argument settings as the MAtLAb code stated above.
 ```
-centroid_sphBregman_GMM((stride, instanceW, supp, w, c0, options)
+barycenter <- centroid_sphBregman_GMM((stride, instanceW, supp, w, c0, options)
 ```
 
 
@@ -69,3 +69,10 @@ centroid_sphBregman_GMM((stride, instanceW, supp, w, c0, options)
    
 
 #### For computing MAW distance
+
+After installation of Rmosek pacakge, the following code will help compute the MAW distance between two GMMs.
+```
+source(MAWdist.R)
+MAWdist <- Mawdist(d, supp1, supp2, w1, w2)
+```
+
