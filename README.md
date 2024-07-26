@@ -13,9 +13,11 @@ To cite the reference, please use Lin L, Shi W, Ye J, Li J. (2023) Multisource s
 
 3. Then compile *.c source files. For Mac OS (and probably need to install Accelerate framework from Apple Store, if haven't). Open a Matlab console under the directory: code/gmm-barycenter/src/barycenter
    Then run the following command in the Matlab console:
-
+   
+```
 mex -v CLIBS="$CLIBS -lstdc++ -framework Accelerate" sqrtm_batch_it.c
 mex -v CLIBS="$CLIBS -lstdc++ -framework Accelerate" sqrtm_batch_ud.c
+```
 
 The above commands will compile C source files: sqrtm_batch_it.c and sqrtm_batch_ud.c. 
 
